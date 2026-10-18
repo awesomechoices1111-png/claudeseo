@@ -471,6 +471,7 @@ Google SEO APIs. 4-tier credential system covering PageSpeed Insights, CrUX, CrU
 /seo google report cwv-audit           # CWV-focused report
 /seo google report gsc-performance     # Search performance report
 /seo google report indexation          # Indexation status report
+/seo google weekly [client-slug]       # Weekly multi-client report (GSC + GA4)
 ```
 
 **PageSpeed / CrUX (Tier 0):**
