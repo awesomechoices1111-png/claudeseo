@@ -45,7 +45,7 @@ claude-seo/
     seo-hreflang/SKILL.md       # International SEO / hreflang
     seo-google/                  # Google SEO APIs
       SKILL.md
-      references/                # API reference files (11 files)
+      references/                # API reference files (12 files)
     seo-backlinks/SKILL.md      # Backlink profile analysis
     seo-cluster/                 # Semantic topic clustering (v1.9.0, by Lutfiya Miller)
       SKILL.md
@@ -85,7 +85,7 @@ claude-seo/
     seo-flow.md                  # FLOW framework integration
   hooks/                           # Quality gate hooks
     hooks.json                   # PostToolUse schema validation
-  scripts/                         # 54 Python execution scripts
+  scripts/                         # 55 Python execution scripts
     google_auth.py               # Credential management (OAuth, SA, API key, 4-tier detection)
     backlinks_auth.py            # Backlink API credential management (Moz, Bing)
     moz_api.py                   # Moz Link Explorer API (DA/PA, spam, domains, anchors)
@@ -134,6 +134,7 @@ claude-seo/
     ucp_check.py                 # UCP (Universal Commerce Protocol) profile auditor
     unlighthouse_run.py          # Unlighthouse CLI wrapper (site-wide Lighthouse)
     validate_backlink_report.py  # Backlink report validation
+    weekly_report.py             # Weekly multi-client SEO report runner (GSC + GA4, noise-aware)
     portability_check.py         # Cross-platform portability lint for SKILL.md files
     consistency_check.py         # Reference-graph gate: dead refs, routing, lock, orphans
     release_sign.py              # SHA-256 manifest generator for release signing

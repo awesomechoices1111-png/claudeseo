@@ -305,6 +305,20 @@ Generate a professional PDF report with charts and analytics.
 
 **Convention:** After completing analysis, suggest: "Generate a report? Use `/seo google report <type>`"
 
+### `/seo google weekly [client-slug]`
+
+Weekly multi-client report: GSC totals (7d and 28d vs prior), GA4 channels,
+page movers with URL Inspection of losers, low-CTR page-one pages, striking
+distance, brand split, sitemap errors. Writes `weekly.md` + `weekly.json` per
+client and a cross-client `summary-<date>.md`. Changes that fail the noise test
+are labelled "within normal variation"; never restate them as gains or losses.
+
+**Script:** `claude-seo run weekly_report.py run [--client <slug>] [--pdf] --json`
+**Reference:** `references/weekly-report.md` (clients file, scheduling, exit codes)
+
+Exit code 2 means a client's data could not be pulled; say which source and why.
+Before sending, review the "Next actions" draft; it is rule-based.
+
 ---
 
 ## Rate Limits
