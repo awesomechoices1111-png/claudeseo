@@ -29,7 +29,8 @@ ALLOWED_CORE_SCRIPTS = frozenset(
     {
         "agent_ux_check.py", "analyze_visual.py", "backlinks_auth.py",
         "bing_webmaster.py", "capture_screenshot.py", "commoncrawl_graph.py",
-        "content_humanize.py", "content_quality.py", "content_verify.py",
+        "content_gate.py", "content_humanize.py", "content_quality.py",
+        "content_verify.py",
         "crux_history.py", "dataforseo_costs.py", "dataforseo_merchant.py",
         "dataforseo_normalize.py", "domain_history.py", "drift_baseline.py",
         "drift_compare.py", "drift_history.py", "drift_report.py", "fetch_page.py",

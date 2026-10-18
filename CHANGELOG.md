@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- `scripts/content_gate.py`: pre-review gate for AI-drafted content. Blocks drafts with
+  unfilled `[[TODO]]` markers, prices or phone numbers missing from the client facts sheet,
+  or heavy overlap with existing pages; warns on low quality, uncited claims, and openings
+  that are not answer-first. Writes a cleaned copy and an editor review sheet. Never publishes.
+- `docs/content-pipeline/`: human-in-the-loop content workflow (facts sheet, brief, draft
+  instructions, gate, editor sign-off, edit log).
+
 ## [2.2.4] - 2026-07-20
 
 Community maintenance release following a full review of every open issue and pull request.
