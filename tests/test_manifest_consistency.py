@@ -278,14 +278,17 @@ def test_skill_metadata_versions_match_plugin_json():
     # Community-contributed skills that maintain their own version cadence.
     # Each entry: skill name -> expected literal version string.
     COMMUNITY_OVERRIDES = {"seo-content-brief": "1.0.0"}
+    # Third-party bundles shipped unmodified; they do not follow plugin versioning.
+    THIRD_PARTY_EXTENSIONS = {"seo-skills-pack"}
 
     plugin = json.loads(PLUGIN_JSON.read_text(encoding="utf-8"))
     expected_default = plugin["version"]
     errors = []
 
-    candidates = list((REPO_ROOT / "skills").glob("*/SKILL.md")) + list(
-        (REPO_ROOT / "extensions").glob("*/skills/*/SKILL.md")
-    )
+    candidates = list((REPO_ROOT / "skills").glob("*/SKILL.md")) + [
+        p for p in (REPO_ROOT / "extensions").glob("*/skills/*/SKILL.md")
+        if p.parents[2].name not in THIRD_PARTY_EXTENSIONS
+    ]
     for skill_md in candidates:
         skill_name = skill_md.parent.name
         rel = skill_md.relative_to(REPO_ROOT)
